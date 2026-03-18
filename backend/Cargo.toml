@@ -12,6 +12,10 @@ path = "src/lib.rs"
 name = "trustverify"
 path = "src/main.rs"
 
+[[bin]]
+name = "registry_sign"
+path = "src/bin/registry_sign.rs"
+
 [dependencies]
 axum = { version = "0.7", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
@@ -23,3 +27,7 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 hex = "0.4"
 chrono = { version = "0.4", features = ["serde"] }
 clap = { version = "4", features = ["derive"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+ring = "0.17"
+base64 = "0.22"
+reqwest = { version = "0.12", features = ["json"] }

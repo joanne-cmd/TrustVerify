@@ -51,7 +51,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     match cli.command {
         Some(Command::Serve { host, port, registry }) => {
             let registry = Arc::new(load_registry(&registry)?);
-            api::serve(host, port, registry).await?;
+            let history = trustverify::HistoryStore::new("quotes.db")
+                .ok()
+                .map(std::sync::Mutex::new)
+                .map(Arc::new);
+            api::serve(host, port, registry, history).await?;
         }
         Some(Command::Verify { quote, registry }) => {
             let quote_content = if quote == "-" {
@@ -78,7 +82,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
                 PathBuf::from("registry.json")
             };
             let registry = Arc::new(load_registry(&registry_path)?);
-            api::serve("0.0.0.0".to_string(), 8080, registry).await?;
+            let history = trustverify::HistoryStore::new("quotes.db")
+                .ok()
+                .map(std::sync::Mutex::new)
+                .map(Arc::new);
+            api::serve("0.0.0.0".to_string(), 8080, registry, history).await?;
         }
     }
 
