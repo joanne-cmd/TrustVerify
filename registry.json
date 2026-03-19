@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "description": "Provider registry for TrustVerify — maps Platform IDs to verified cloud providers",
+  "entries": [
+    {
+      "platform_id_hex": "a1b2c3d4e5f6789012345678abcdef01",
+      "provider": "Demo AWS",
+      "region": "us-east-1",
+      "verification_level": 1,
+      "added_at": "2025-03-10"
+    },
+    {
+      "platform_id_hex": "b2c3d4e5f6789012345678abcdef0123",
+      "provider": "Demo Azure",
+      "region": "europe-west",
+      "verification_level": 1,
+      "added_at": "2025-03-10"
+    },
+    {
+      "platform_id_hex": "aabbccdd11223344aabbccdd11223344",
+      "provider": "AWS Nitro Enclaves",
+      "region": "us-east-1",
+      "verification_level": 1,
+      "added_at": "2025-03-12"
+    },
+    {
+      "platform_id_hex": "deadbeef00112233deadbeef00112233",
+      "provider": "Azure Confidential Computing",
+      "region": "eastus",
+      "verification_level": 1,
+      "added_at": "2025-03-12"
+    },
+    {
+      "platform_id_hex": "cafebabe12345678cafebabe12345678",
+      "provider": "Google Cloud Confidential VMs",
+      "region": "us-central1",
+      "verification_level": 1,
+      "added_at": "2025-03-12"
+    },
+    {
+      "platform_id_hex": "11223344556677881122334455667788",
+      "provider": "Flashbots TEE Node",
+      "region": "eu-west-1",
+      "verification_level": 1,
+      "added_at": "2025-03-12"
+    },
+    {
+      "platform_id_hex": "8100000000000000939a7233f79c4ca9",
+      "provider": "Google Cloud Platform",
+      "region": "us-central1-a",
+      "verification_level": 2,
+      "added_at": "2026-03-18"
+    }
+  ]
+}

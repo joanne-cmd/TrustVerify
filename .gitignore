@@ -1,0 +1,9 @@
+# Rust build artifacts
+backend/target/
+
+# SQLite database (runtime file, not source)
+backend/quotes.db
+
+# Internal notes
+backend/CODE_EXPLAINER.md
+docs/
