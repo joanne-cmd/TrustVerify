@@ -22,7 +22,11 @@ Based on: *"Narrowing the Gap between TEEs Threat Model and Deployment Strategie
 
 ---
 
+## Documentation
 
+Guides and planning docs (build, demo script, checklists) are in a **separate folder** next to this repo: `../ppid-verification-docs`. Treat that directory as its own Git project (`git init`, remote, push) when you publish it.
+
+---
 
 ## Quick Start
 
